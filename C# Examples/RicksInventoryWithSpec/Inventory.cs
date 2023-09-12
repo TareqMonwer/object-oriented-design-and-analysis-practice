@@ -45,17 +45,17 @@ namespace RicksInventory
             for (int i = 0; i < guiters.Count; i++)
             {
                 Guitar guitar = guiters[i];
-
-                if (searchGuitarSpec.getBuilder() != guitar.spec.getBuilder()) { continue;  }
+                GuitarSpec guiterSpec = guitar.getSpec();
+                if (searchGuitarSpec.getBuilder() != guiterSpec.getBuilder()) { continue;  }
                 
                 String model = searchGuitarSpec.getModel();
-                if ((model != null) && (!model.Equals("")) && (!model.Equals(guitar.spec.getModel()))) { continue; }
+                if ((model != null) && (!model.Equals("")) && (!model.Equals(guiterSpec.getModel()))) { continue; }
 
-                if (searchGuitarSpec.getType() != guitar.spec.getType()) { continue; }
+                if (searchGuitarSpec.getType() != guiterSpec.getType()) { continue; }
 
-                if (searchGuitarSpec.getTopWood() != guitar.spec.getTopWood()) { continue; }
+                if (searchGuitarSpec.getTopWood() != guiterSpec.getTopWood()) { continue; }
 
-                if (searchGuitarSpec.getBackWood() != guitar.spec.getBackWood()) { continue; }
+                if (searchGuitarSpec.getBackWood() != guiterSpec.getBackWood()) { continue; }
 
                 matchingGuitars.Add(guitar);
             }

@@ -28,12 +28,13 @@ namespace RicksInventory
             {
                 foreach (var guitar in guitars)
                 {
+                    GuitarSpec guiterSpec = guitar.getSpec();
                     Console.WriteLine("Erin, you might like this " +
-                        guitar.spec.getBuilder() + " " +
-                        guitar.spec.getModel() + " " + 
-                        guitar.spec.getType() + " " +
-                        guitar.spec.getBackWood() + " back and sides." +
-                        guitar.spec.getTopWood() + " top.\n" + "You can have it only for $" + 
+                        guiterSpec.getBuilder() + " " +
+                        guiterSpec.getModel() + " " + 
+                        guiterSpec.getType() + " " +
+                        guiterSpec.getBackWood() + " back and sides." +
+                        guiterSpec.getTopWood() + " top.\n" + "You can have it only for $" + 
                         guitar.getPrice() + "!"
                     );
                 }

@@ -23,5 +23,7 @@ namespace RicksInventory
 
         public String getSerialNumber() { return serialNumber; }
         public double getPrice() { return price; }
+
+        public GuitarSpec getSpec() {  return spec; }
     }
 }
