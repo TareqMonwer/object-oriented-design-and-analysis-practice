@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RicksInventoryWithSpec", "RicksInventoryWithSpec.csproj", "{7DBCBC10-85B5-4651-9641-7701CDDAD590}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RicksInventoryWithSpec", "RicksInventoryWithSpec.csproj", "{7DBCBC10-85B5-4651-9641-7701CDDAD590}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplyDesign", "ApplyDesign", "{4660DB97-BDF6-4B4D-A710-3494C5F48859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReusableApp", "..\ReusableApp\ReusableApp.csproj", "{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{7DBCBC10-85B5-4651-9641-7701CDDAD590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DBCBC10-85B5-4651-9641-7701CDDAD590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DBCBC10-85B5-4651-9641-7701CDDAD590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D5643D3-5E9F-4C33-9FE6-65DEA1BB03E8} = {4660DB97-BDF6-4B4D-A710-3494C5F48859}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DCBB9B6-6436-4D0E-B71D-83AAA4B2BEFC}
