@@ -2,6 +2,9 @@ package dogdoor.remote;
 
 import dogdoor.dogdoor.DogDoor;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Remote {
     private final DogDoor door;
 

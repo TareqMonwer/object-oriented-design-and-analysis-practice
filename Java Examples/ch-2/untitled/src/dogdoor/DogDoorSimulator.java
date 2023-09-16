@@ -1,5 +1,6 @@
 package dogdoor;
 
+import dogdoor.barkrecognizer.BarkRecognizer;
 import dogdoor.dogdoor.DogDoor;
 import dogdoor.remote.Remote;
 
@@ -7,14 +8,25 @@ public class DogDoorSimulator {
     public static void main(String[] args) {
         DogDoor door = new DogDoor();
         Remote remote = new Remote(door);
-        System.out.println("Fido barks outside...");
-        remote.toggleDoor();
-        System.out.println("Fido entered home");
-        remote.toggleDoor();
+        BarkRecognizer recognizer = new BarkRecognizer(door);
 
-        System.out.println("\nHe's trying to go out...");
-        remote.toggleDoor();
+        System.out.println("Fido trying to go out...");
+        // remote.toggleDoor();
+        recognizer.recognize("woof");
         System.out.println("Fido's gone outside...");
-        remote.toggleDoor();
+        System.out.println("Fido's all done...");
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("But fido's stuck outside\n");
+        System.out.println("Fido starts barking to get inside...");
+//        System.out.println("\n... So gina grabs the remote control");
+//        remote.toggleDoor();
+        recognizer.recognize("woof");
+        System.out.println("Back inside...");
     }
 }
