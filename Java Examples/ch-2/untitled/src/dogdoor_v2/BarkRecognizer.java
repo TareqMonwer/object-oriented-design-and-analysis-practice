@@ -1,26 +1,26 @@
-package dogdoor.barkrecognizer;
-
-import dogdoor.bark.Bark;
-import dogdoor.dogdoor.DogDoor;
+package dogdoor_v2;
 
 import java.util.List;
 
 public class BarkRecognizer {
-    private final DogDoor door;
+    private DoogDoor door;
 
-    public BarkRecognizer(DogDoor door) {
+    public BarkRecognizer(DoogDoor door) {
         this.door = door;
     }
 
     public void recognize(Bark bark) {
+        System.out.println("\tBarkRecognizer hears a " + bark.getSound() + " sound.");
+
         List<Bark> allowedBarks = door.getAllowedBarks();
         for (Bark allowedBark:allowedBarks) {
-            System.out.println("BarkRecognizer heard a " + bark.getSound() + " sound...");
 
             if (allowedBark.equals(bark)) {
                 door.open();
                 return;
             }
         }
+
+        System.out.println("This dog is not allowed.");
     }
 }
